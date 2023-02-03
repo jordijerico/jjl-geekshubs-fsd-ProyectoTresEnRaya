@@ -1,8 +1,0 @@
-/* Carga de fuente externa propia */
-@font-face {
-    font-family: 'AlloyInk';
-    src: url('../fonts/aAlloyInk.ttf') format('truetype');
-  }
-  html *{
-    font-family: 'AlloyInk';
-  }

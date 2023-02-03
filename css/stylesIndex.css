@@ -1,0 +1,56 @@
+/* Carga de fuente externa propia */
+@font-face {
+    font-family: 'AlloyInk';
+    src: url('../fonts/aAlloyInk.ttf') format('truetype');
+}
+
+/* Aplicacion de fuente importada a todo el documento */
+html * {
+    font-family: 'AlloyInk';
+    color: white;
+}
+
+/* Estilos del contenedor principal de la vista */
+.container-main {
+    height: 100%;
+    padding: 0 !important;
+    background-color: rgba(0, 0, 0, 0.822);
+}
+
+/* Estilos del sizing de las 3 rows */
+.rowTop,
+.rowMiddle,
+.rowBottom {
+    width: 100%;
+}
+
+.rowTop {
+    height: 45vh;
+}
+
+.rowMiddle {
+    height: 40vh;
+}
+
+.rowBottom {
+    height: 15vh;
+}
+
+html a {
+    text-decoration: none;
+    color: black;
+    color: white;
+}
+
+.title {
+    font-size: x-large;
+}
+
+/* Estilos boton START */
+html button {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 20px;
+    font-size: x-large;
+}
+
