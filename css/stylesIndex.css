@@ -14,7 +14,7 @@ html * {
 .container-main {
     height: 100%;
     padding: 0 !important;
-    background-color: rgba(0, 0, 0, 0.822);
+    background-color: rgba(0, 0, 0, 0.932);
 }
 
 /* Estilos del sizing de las 3 rows */
@@ -24,26 +24,38 @@ html * {
     width: 100%;
 }
 
+/* Estilos de la ROW del titulo */
 .rowTop {
     height: 45vh;
 }
+
+/* Estilos de la ROW del boton central de START */
 
 .rowMiddle {
     height: 40vh;
 }
 
+/* Estilos de la ROW de NORMAS */
+
 .rowBottom {
     height: 15vh;
 }
 
+/* Estilos del link del boton */
 html a {
     text-decoration: none;
     color: black;
     color: white;
 }
 
+/* Estilos div titulo */
 .title {
-    font-size: x-large;
+    font-size: 60px;
+}
+
+/* Estilos div normas */
+.normas {
+    font-size: 20px;
 }
 
 /* Estilos boton START */
@@ -53,4 +65,3 @@ html button {
     padding: 20px;
     font-size: x-large;
 }
-
