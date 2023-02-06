@@ -69,26 +69,34 @@ input {
 /* Diferentes estilos media query para pantallas mas grandes */
 
 @media (min-width: 1600px) {
+
+    /* Estilos titulo de la pagina */
     .colTitle {
         font-size: 75px;
     }
 }
 
 @media (min-width: 1000px) {
+
+    /* Estilos titulo de la pagina */
     .colTitle {
         font-size: 50px;
     }
 
+    /* Estilos labels de los inputs */
     label {
         font-size: xx-large;
         text-align: center;
     }
-    input{
+
+    /* Estilos inputs texto */
+    input {
         margin-top: 0px !important;
         height: 40px;
         width: 250px;
     }
 
+    /* Estilos columnas player 1-2 */
     .colPlayerSel1,
     .colPlayerSel2 {
         display: grid;
@@ -96,15 +104,18 @@ input {
         align-items: center;
     }
 
+    /* Estilos boton Aceptar */
     .btnAceptar {
         background-color: transparent;
         border: 1px solid white;
         border-radius: 5px;
+        height: 40px;
         font-size: small;
         margin: 0;
-        
+
     }
 
+    /* Estilos boton Start */
     .btnStart {
         background-color: transparent;
         border: 1px solid white;
