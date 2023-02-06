@@ -54,3 +54,20 @@ html a {
     font-size: x-large;
     border-radius: 10px;
 }
+
+
+/* Estilos en pantallas mas grandes de 1600px(width)(PC) */
+@media (min-width: 1600px) {
+
+    .title{
+        font-size: 120px;
+    }
+    .normas{
+        font-size: xx-large;
+    }
+    .btnStart {
+        font-size: xx-large;
+     
+    }
+    
+}

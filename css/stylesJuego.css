@@ -4,30 +4,34 @@
     background-color: rgba(0, 0, 0, 0.932);
 }
 
-.row-main{
+.row-main {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+
 }
 
-.colPlayer1, .colPlayer2{
-    height: 22vh;
+.colPlayer1,
+.colPlayer2 {
+    height: 19vh;
+    border: 1px solid white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  
 }
 
 
-.colBoard{
+.colBoard {
     height: 56vh;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 !important;
 }
-.boxes{
-  border: 1px solid white;
+
+.boxes {
+    border: 1px solid white;
 }
 
 
@@ -37,7 +41,13 @@
 
 @media (min-width: 1600px) {
 
-    .colPlayer1, .colPlayer2{
-        height: 45vh;
+    .colPlayer1,
+    .colPlayer2 {
+        height: 30vh;
     }
+    .colPlayer1,
+    .colPlayer2 {
+        font-size: x-large
+    }
+
 }
