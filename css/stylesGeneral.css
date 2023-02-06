@@ -11,7 +11,7 @@ html * {
 }
 
 /* Estilo hover botones */
-.btnAceptar:hover, .btnStart:hover {
+button:hover {
     box-shadow: inset -2px 5px 10px  grey;
         
     }

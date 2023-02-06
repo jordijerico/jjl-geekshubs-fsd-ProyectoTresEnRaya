@@ -35,15 +35,13 @@
 }
 
 
-
-
 /* Diferentes estilos media query para pantallas mas grandes */
 
 @media (min-width: 1600px) {
 
     .colPlayer1,
     .colPlayer2 {
-        height: 30vh;
+        height: 35vh;
     }
     .colPlayer1,
     .colPlayer2 {

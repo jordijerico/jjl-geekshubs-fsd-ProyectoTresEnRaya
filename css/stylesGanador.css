@@ -1,0 +1,81 @@
+/* Estilos contenedor principal fluid */
+.container-main {
+    height: 100vh;
+    background-color: black;
+
+}
+
+/* Estilos de la ROW de la parte de arriba(texto enhorabuena) */
+.rowTop {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+}
+
+/* Estilos de la ROW de la parte de abajo(botones(2)) */
+.rowBottom {
+    height: 50vh;
+    text-align: center;
+
+}
+
+.rowBottom button {
+    margin-top: 50px;
+}
+
+/* Estilos botones / links */
+.btnPlayAgain a {
+    text-decoration: none;
+    color: white;
+}
+
+.btnHome a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilos del boton pagina principal y volver a jugar */
+.btnHome,
+.btnPlayAgain {
+    background-color: transparent;
+    border: 1px solid white;
+    width: 70%;
+    height: 35px;
+    border-radius: 10px;
+}
+
+
+
+
+/* Diferentes estilos media query para pantallas mas grandes */
+
+@media (min-width: 1600px) {
+
+    /* Estilos titulo de la pagina */
+    .rowTop {
+        font-size: 80px;
+    }
+
+    /* Estilos del boton pagina principal y volver a jugar */
+    .btnHome,
+    .btnPlayAgain {
+        width: 20%;
+        height: 20%;
+        margin: 20px;
+    }
+    .rowBottom{
+        display: flex;
+    }
+
+    /* Estilos botones / links */
+    .btnPlayAgain a {
+        font-size: x-large;
+    }
+
+    .btnHome a {
+        font-size: x-large;
+    }
+}
