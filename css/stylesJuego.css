@@ -1,0 +1,24 @@
+/* Estilos del contenedor principal de la vista */
+.container-main {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.932);
+}
+
+.row-main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.colPlayer1{
+    background-color: aqua;
+    height: 20vh;
+}
+.colBoard{
+    background-color: green;
+    height: 60vh;
+}
+.colPlayer2{
+    background-color: blueviolet;
+    height: 20vh;
+}

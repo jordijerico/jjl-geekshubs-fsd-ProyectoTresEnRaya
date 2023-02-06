@@ -12,7 +12,7 @@ html * {
 
 /* Estilos del contenedor principal de la vista */
 .container-main {
-    height: 100%;
+    height: 100vh;
     padding: 0 !important;
     background-color: rgba(0, 0, 0, 0.932);
 }
