@@ -9,9 +9,15 @@ html * {
     font-family: 'AlloyInk';
     color: white;
 }
+/* Estilos del contenedor principal de la vista */
+.container-main {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.932);
+}
 
 /* Estilo hover botones */
 button:hover {
     box-shadow: inset -2px 5px 10px  grey;
         
-    }
+}
+
