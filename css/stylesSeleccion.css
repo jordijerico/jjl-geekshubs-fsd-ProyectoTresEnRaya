@@ -1,0 +1,55 @@
+/* Estilos del contenedor principal de la vista */
+.container-main {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.932);
+}
+/* Estilos */
+.rowSelection{
+    height: 100vh;
+    justify-content: space-around;
+}
+
+/* Estilos columna del titulo de la pagina */
+.colTitle{
+    font-size: xx-large;
+    height: 20vh;
+    text-align: center;
+    padding-top: 10px;
+   
+}
+
+/* Estilos columna de seleccion player 1 y 2 */
+.colPlayerSel1, .colPlayerSel2 {
+    height: 35vh;
+    padding-top: 12px;
+}
+
+/* Estilos de la columna del boton Start */
+.colStartBtn{
+    height: 10vh;
+    padding-top: 10px;
+}
+
+/* Estilos boton START (link y btn) */
+.btnStart a{
+    text-decoration: none;
+    color: white;
+}
+.btnStart {
+background-color: transparent;
+border: 1px solid white;
+}
+
+
+/* Diferentes estilos media query para pantallas mas grandes */
+
+@media (min-width: 1600px) {
+    .colTitle{
+        font-size: 75px; 
+    }
+  }
+@media (min-width: 1000px) {
+    .colTitle{
+        font-size: 50px;
+    }
+  }
