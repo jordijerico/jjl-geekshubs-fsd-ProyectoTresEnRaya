@@ -10,15 +10,34 @@
     align-items: center;
     justify-content: space-around;
 }
-.colPlayer1{
-    background-color: aqua;
-    height: 20vh;
+
+.colPlayer1, .colPlayer2{
+    height: 22vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
 }
+
+
 .colBoard{
-    background-color: green;
-    height: 60vh;
+    height: 56vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.colPlayer2{
-    background-color: blueviolet;
-    height: 20vh;
+.boxes{
+  border: 1px solid white;
+}
+
+
+
+
+/* Diferentes estilos media query para pantallas mas grandes */
+
+@media (min-width: 1600px) {
+
+    .colPlayer1, .colPlayer2{
+        height: 45vh;
+    }
 }
