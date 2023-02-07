@@ -1,7 +1,3 @@
-
-
-
-
 let logicBoard = Array.from(document.getElementsByClassName("boxes"));
 
 let turn = true;
@@ -40,6 +36,16 @@ logicBoard.map(
                 boardGame[box.id] = (turn) ? "X" : "O";
                 //Cambiamos turno
                 turn = !turn;
+
+
+
+
+                
+                //Ejemplo de añadir una clase nueva que tienes en CSS a un elemento (classList.add)
+                // box.classList.add('ejemplodeClase')
+
+                //Ejemplo de añadir un elemento a otro elemento con HTML desde JS. Elemento a añadir entre ` `
+                // box.innerHTML = `<p>EJEMPLODETEXTO </p>`
             }
         })
     }

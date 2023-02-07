@@ -93,6 +93,11 @@ input {
         width: 250px;
     }
 
+    /* Estilos placeholder de los inputs de Nombre jugador */
+    input ::placeholder{
+
+    }
+
     /* Estilos columnas player 1-2 */
     .colPlayerSel1,
     .colPlayerSel2 {
