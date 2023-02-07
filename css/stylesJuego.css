@@ -1,3 +1,4 @@
+/* Estilos de la row principal */
 .row-main {
     height: 100vh;
     display: flex;
@@ -6,6 +7,7 @@
 
 }
 
+/* Estilos de la columna de datos de los dos jugadores */
 .colPlayer1,
 .colPlayer2 {
     height: 19vh;
@@ -15,6 +17,7 @@
     justify-content: space-around;
 }
 
+/* Estilos de la columna del juego (GRID) */
 
 .colBoard {
     height: 56vh;
@@ -24,6 +27,7 @@
     padding: 0 !important;
 }
 
+/* Estilos de cada cajon del grid */
 .boxes {
     border: 1px solid white;
 }
@@ -37,6 +41,7 @@
     .colPlayer2 {
         height: 35vh;
     }
+
     .colPlayer1,
     .colPlayer2 {
         font-size: x-large
