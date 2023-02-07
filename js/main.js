@@ -1,4 +1,7 @@
 
+
+
+
 let logicBoard = Array.from(document.getElementsByClassName("boxes"));
 
 let turn = true;
@@ -6,9 +9,9 @@ let turn = true;
 let turnPlayer1 = 3;
 let turnPlayer2 = 3;
 
-
 let boardGame = ["", "", "", "", "", "", "", "", "",];
 
+//Matriz de combinaciones ganadoras.
 let chartWinner = [
 
     [0, 1, 2],
@@ -27,13 +30,14 @@ logicBoard.map(
         box.addEventListener("click", () => {
             if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0)) {
                 box.innerHTML = (turn) ? "X" : "O";
-
+                //Decrementador de turnos
                 if (turn) {
                     turnPlayer1--;
                 } else {
                     turnPlayer2--;
                 }
-
+                //Meter en array logica del tablero la X y O en la posición adecuada
+                boardGame[box.id] = (turn) ? "X" : "O";
                 //Cambiamos turno
                 turn = !turn;
             }
