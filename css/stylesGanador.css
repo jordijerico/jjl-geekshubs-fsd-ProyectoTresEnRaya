@@ -56,7 +56,8 @@
         height: 20%;
         margin: 20px;
     }
-    .rowBottom{
+
+    .rowBottom {
         display: flex;
     }
 

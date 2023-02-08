@@ -40,7 +40,7 @@ logicBoard.map(
 
 
 
-                
+
                 //Ejemplo de añadir una clase nueva que tienes en CSS a un elemento (classList.add)
                 // box.classList.add('ejemplodeClase')
 

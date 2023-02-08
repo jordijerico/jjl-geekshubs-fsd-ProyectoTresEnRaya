@@ -6,6 +6,11 @@ input {
     width: 200px;
 }
 
+/* Estilos placeholder de los inputs de Nombre jugador */
+input ::placeholder {
+
+}
+
 /* Estilos */
 .rowSelection {
     height: 100vh;
@@ -18,7 +23,6 @@ input {
     height: 20vh;
     text-align: center;
     padding-top: 20px;
-
 }
 
 /* Estilos columna de seleccion player 1 y 2 */
@@ -91,11 +95,6 @@ input {
         margin-top: 0px !important;
         height: 40px;
         width: 250px;
-    }
-
-    /* Estilos placeholder de los inputs de Nombre jugador */
-    input ::placeholder{
-
     }
 
     /* Estilos columnas player 1-2 */
