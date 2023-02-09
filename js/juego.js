@@ -1,11 +1,26 @@
+//Traer los datos(nombres de jugadores) de SessionStorage
+
+let nombreJugadorJuego1 = JSON.parse(sessionStorage.getItem("nombreJugador1"));
+let nombreJugadorJuego2 = JSON.parse(sessionStorage.getItem("nombreJugador2"));
+
+document.getElementById("nombrePlayer1Juego").innerHTML = (nombreJugadorJuego1);
+document.getElementById("nombrePlayer2Juego").innerHTML = (nombreJugadorJuego2);
+
+
+
+
+
 //Tablero logico de las celdas de los divs del grid
 let logicBoard = Array.from(document.getElementsByClassName("boxes"));
 
 let turn = true;
 
-//Turnos iniciali<ados de los jugadores en 3 (decrecerá)
+//Turnos inicializados de los jugadores en 3 (decrecerá)
 let turnPlayer1 = 3;
 let turnPlayer2 = 3;
+
+document.getElementById("turnosPlayer1").innerHTML = (`Nº de turnos restantes: ${turnPlayer1}`);
+document.getElementById("turnosPlayer2").innerHTML = (`Nº de turnos restantes: ${turnPlayer2}`);
 
 //Array logica del tablero donde pintamos en cada posicion la X o la O correspondiente al hacer click al ir jugando.
 //Aquí se sobreescribiran cuando las vayamos moviendo o sustituyendo por el otro simbolo
