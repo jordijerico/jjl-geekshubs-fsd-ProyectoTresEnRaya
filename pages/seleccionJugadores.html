@@ -22,24 +22,26 @@
             <div class="col-12 col-lg-12 colTitle">SELECCIÓN DE JUGADORES</div>
             <!-- Columna 2 seleccion player 1-->
             <div class="col-11 col-lg-5 colPlayerSel1">
-                <label for="namePlayer1">Jugador 1</label>
+                <label id="labelNombre1" for="namePlayer1">Jugador 1</label>
                 <input name="namePlayer1" id="namePl1" type="text" required minlength="3" maxlength="12"
-                    placeholder="Nombre Jugador 1 (3-12 c.)">
-                <button id="" class="btnAceptar">Aceptar
+                    placeholder="Nombre Jugador 1">
+                <p class="nameMessage" id="pMensaje1"></p>
+                <button id="botonAceptarPlayer1" class="btnAceptar">Aceptar
                 </button>
             </div>
             <!-- Columna 3 seleccion player 2-->
             <div class="col-11 col-lg-5 colPlayerSel2">
-                <label for="namePlayer2">Jugador 2</label>
+                <label id="labelNombre2" for="namePlayer2">Jugador 2</label>
                 <input name="namePlayer2" id="namePl2" type="text" required minlength="3" maxlength="12"
-                    placeholder="Nombre Jugador 2 (3-12 c.)">
-                <button id="" class="btnAceptar">Aceptar
+                    placeholder="Nombre Jugador 2">
+                <p class="nameMessage" id="pMensaje2"></p>
+                <button id="botonAceptarPlayer2" class="btnAceptar">Aceptar
                 </button>
             </div>
             <!-- Columna 4 boton START juego-->
             <div class="col col-lg-12 colStartBtn text-center">
                 <button id="botonAceptarSeleccion" class="btnStart">
-                    <a href="../pages/juego.html">START</a>
+                    <a href="#">START</a>
                 </button>
             </div>
         </div>
