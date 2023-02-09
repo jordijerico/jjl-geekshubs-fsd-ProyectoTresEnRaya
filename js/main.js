@@ -7,6 +7,8 @@ let turn = true;
 let turnPlayer1 = 3;
 let turnPlayer2 = 3;
 
+//Array logica del tablero donde pintamos en cada posicion la X o la O correspondiente al hacer click al ir jugando.
+//Aquí se sobreescribiran cuando las vayamos moviendo o sustituyendo por el otro simbolo
 let boardGame = ["", "", "", "", "", "", "", "", "",];
 
 //Matriz de combinaciones ganadoras.
