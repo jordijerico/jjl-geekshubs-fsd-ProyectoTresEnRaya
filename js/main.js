@@ -40,13 +40,13 @@ botonAceptarPlayer2.addEventListener("click", () => {
 const comprobarCampos = () => {
     if ((sessionStorage.getItem("nombreJugador1") !== null) && (sessionStorage.getItem("nombreJugador2") !== null)) {
         document.getElementById("botonAceptarSeleccion").style.visibility = "visible";
-     }
+    }
 };
 
 //Boton de START empezar JUEGO.
 botonAceptarSeleccion.addEventListener("click", () => {
 
-        window.open("../pages/juego.html", "_self");
-    
+    window.open("../pages/juego.html", "_self");
+
 })
 
