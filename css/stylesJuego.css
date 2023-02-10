@@ -108,10 +108,10 @@
     height: 56vh;
   }
 
-  
-.btnBottom button {
-  height: 70px;
-  width: 200px;
-  font-size: x-large;
-}
+
+  .btnBottom button {
+    height: 70px;
+    width: 200px;
+    font-size: x-large;
+  }
 }
