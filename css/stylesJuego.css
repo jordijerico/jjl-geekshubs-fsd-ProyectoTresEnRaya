@@ -100,14 +100,13 @@
   }
 
   .boxes {
-    font-size: 100px;
+    font-size: 110px;
   }
 
   /* Estilos de la columna del juego (GRID) */
   .colBoard {
-    height: 56vh;
+    height: 70vh;
   }
-
 
   .btnBottom button {
     height: 70px;
