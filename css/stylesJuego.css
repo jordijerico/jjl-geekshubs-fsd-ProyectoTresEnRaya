@@ -2,31 +2,31 @@
 
 :root {
     --border: 2px solid #ffffff;
-  }
-  
-  .boxes:nth-child(1),
-  .boxes:nth-child(2),
-  .boxes:nth-child(3) {
+}
+
+.boxes:nth-child(1),
+.boxes:nth-child(2),
+.boxes:nth-child(3) {
     border-bottom: var(--border);
-  }
-  
-  .boxes:nth-child(7),
-  .boxes:nth-child(8),
-  .boxes:nth-child(9) {
+}
+
+.boxes:nth-child(7),
+.boxes:nth-child(8),
+.boxes:nth-child(9) {
     border-top: var(--border);
-  }
-  
-  .boxes:nth-child(1),
-  .boxes:nth-child(4),
-  .boxes:nth-child(7) {
+}
+
+.boxes:nth-child(1),
+.boxes:nth-child(4),
+.boxes:nth-child(7) {
     border-right: var(--border);
-  }
-  
-  .boxes:nth-child(3),
-  .boxes:nth-child(6),
-  .boxes:nth-child(9) {
+}
+
+.boxes:nth-child(3),
+.boxes:nth-child(6),
+.boxes:nth-child(9) {
     border-left: var(--border);
-  }
+}
 
 /* Estilos de la row principal */
 .row-main {
@@ -36,11 +36,13 @@
     justify-content: space-around;
 }
 
+
 /* Estilos de cada box del grid del tablero principal de juego*/
-.boxes:hover{
+.boxes:hover {
     box-shadow: 0px 0px 5px 3px #ffffff
 }
-.boxes{
+
+.boxes {
     font-size: 60px;
     display: flex;
     justify-content: center;
@@ -82,9 +84,10 @@
     .colPlayer2 {
         font-size: x-large
     }
-    .boxes{
+
+    .boxes {
         font-size: 100px;
     }
-    
+
 
 }
