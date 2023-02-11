@@ -15,8 +15,8 @@ let turn = true;
 let turnPlayer1 = 3;
 let turnPlayer2 = 3;
 
-document.getElementById("turnosPlayer1").innerHTML = (`Nº de turnos restantes: ${turnPlayer1}`);
-document.getElementById("turnosPlayer2").innerHTML = (`Nº de turnos restantes: ${turnPlayer2}`);
+document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
 
 //Array logica del tablero donde pintamos en cada posicion la X o la O correspondiente al hacer click al ir jugando.
 //Aquí se sobreescribiran cuando las vayamos moviendo o sustituyendo por el otro simbolo
@@ -45,13 +45,46 @@ logicBoard.map(
                 //Decrementador de turnos
                 if (turn) {
                     turnPlayer1--;
+                    document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
                 } else {
                     turnPlayer2--;
+                    document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
                 }
                 //Meter en array logica del tablero la X y O en la posición adecuada
                 boardGame[box.id] = (turn) ? "X" : "O";
                 //Cambiamos turno
                 turn = !turn;
+            }
+        })
+    }
+)
+
+
+/* BOTONES DE HOME Y RESET */
+
+let botonReset = document.getElementById("btnReset");
+let botonHome = document.getElementById("btnHome");
+
+
+botonHome.addEventListener('click', () => {
+    window.open("../index.html", "_self");
+    nombreJugadorJuego1 = "";
+    nombreJugadorJuego2 = "";
+})
+
+botonReset.addEventListener('click', () => {
+    window.open("../pages/juego.html", "_self");
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,8 +95,3 @@ logicBoard.map(
 
                 //Ejemplo de añadir un elemento a otro elemento con HTML desde JS. Elemento a añadir entre ` `
                 // box.innerHTML = `<p>EJEMPLODETEXTO </p>`
-            }
-        })
-    }
-)
-

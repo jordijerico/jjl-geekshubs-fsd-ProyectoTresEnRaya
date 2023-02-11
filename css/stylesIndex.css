@@ -62,7 +62,8 @@ html a {
 
     .btnStart {
         font-size: xx-large;
-
+        width: 200px;
+        height: 100px;
     }
 
 }

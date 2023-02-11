@@ -13,7 +13,7 @@ html * {
 /* Estilos del contenedor principal de la vista */
 .container-main {
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.932);
+    background-color: rgba(0, 0, 0, 0.923);
 }
 
 /* Estilo hover botones */
