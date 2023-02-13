@@ -36,6 +36,7 @@ let chartWinner = [
     [2, 4, 6],
 ];
 
+
 //Mapeo de las 'box' para escribir en ellas X y O en cada casilla
 logicBoard.map(
     (box) => {
@@ -47,9 +48,13 @@ logicBoard.map(
                 if (turn) {
                     turnPlayer1--;
                     document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+                    document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
+                    document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
                 } else {
                     turnPlayer2--;
                     document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
+                    document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
+                    document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
                 }
                 //Meter en array logica del tablero la X y O en la posición adecuada
                 boardGame[box.id] = (turn) ? "X" : "O";

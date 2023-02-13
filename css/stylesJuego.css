@@ -49,6 +49,16 @@
 }
 
 
+.pantallaPlayer1Styles{
+  background-color: red;
+}
+
+.pantallaPlayer2Styles{
+  background-color: red;
+}
+
+
+
 /* Estilos de la columna de datos de los dos jugadores */
 .colPlayer1,
 .colPlayer2 {
