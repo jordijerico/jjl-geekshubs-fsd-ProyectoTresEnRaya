@@ -50,13 +50,11 @@
 }
 
 /* 2 clases que se añaden en cada turno a cada div de jugador para indicar el turno que toca */
-.pantallaPlayer1Styles{
-  background-color: red;
+.pantallaPlayer1Styles,
+.pantallaPlayer2Styles {
+  box-shadow: 0px -1px 25px 2px rgba(255,255,255,0.7);
 }
 
-.pantallaPlayer2Styles{
-  background-color: red;
-}
 
 
 /* Estilos de la columna de datos de los dos jugadores */
@@ -102,10 +100,10 @@
   font-size: 50px;
   margin-left: 4.5em;
 }
-  
+
 
 .gameName {
-font-weight: bolder;
+  font-weight: bolder;
 }
 
 
@@ -165,6 +163,6 @@ font-weight: bolder;
 
   .gameName {
     font-size: 1.5em;
-    }
-    
+  }
+
 }

@@ -36,9 +36,9 @@ let chartWinner = [
 ];
 
 
+document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
 //Mapeo de las 'box' para escribir en ellas X y O en cada casilla
-logicBoard.map(
-    (box) => {
+logicBoard.map(box => {
         // Evento / funcion que comprueba los turnos y va pintando X o O cambiando el turno y bajando los turnos
         box.addEventListener("click", () => {
             if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0)) {
@@ -47,22 +47,51 @@ logicBoard.map(
                 if (turn) {
                     turnPlayer1--;
                     document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
-                    document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
-                    document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
+                    document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
+                    document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
+                    boardGame[box.id] = "X";
                 } else {
                     turnPlayer2--;
                     document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
-                    document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
-                    document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
+                    document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
+                    document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
+                    boardGame[box.id] = "O";         
                 }
-                //Meter en array logica del tablero la X y O en la posición adecuada
-                boardGame[box.id] = (turn) ? "X" : "O";
+
+                //Comprobar ganador
+                let comprobante;
+                comprobante = winnerCheck();
+                if (comprobante === "X") {
+                    console.log("JEJEJEJE");
+                    sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego1));
+                    window.open("../pages/ganador.html", "_self");
+                }
+                if (comprobante === "O") {
+                    sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego2));
+                    window.open("../pages/ganador.html", "_self");
+                }
                 //Cambiamos turno
                 turn = !turn;
             }
         })
     }
 )
+
+
+//FUNCION PARA COMPROBAR EL GANADOR CADA TURNO
+const winnerCheck = () => {
+
+    for (let i = 0; i < chartWinner.length; i++) {
+        let [x, y, z] = chartWinner[i];
+        if (boardGame[x] === boardGame[y] && boardGame[y] === boardGame[z] && boardGame[x] === boardGame[z]) {
+            return boardGame[x];
+            ;
+        }
+    }
+    return null;
+}
+
+
 
 /* BOTONES DE HOME Y RESET */
 
@@ -74,6 +103,7 @@ botonHome.addEventListener('click', () => {
     window.open("../index.html", "_self");
     nombreJugadorJuego1 = "";
     nombreJugadorJuego2 = "";
+    sessionStorage.clear();
 })
 
 botonReset.addEventListener('click', () => {
