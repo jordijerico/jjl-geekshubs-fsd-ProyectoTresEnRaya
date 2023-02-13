@@ -6,7 +6,6 @@ let nombreJugadorJuego2 = JSON.parse(sessionStorage.getItem("nombreJugador2"));
 document.getElementById("nombrePlayer1Juego").innerHTML = (nombreJugadorJuego1);
 document.getElementById("nombrePlayer2Juego").innerHTML = (nombreJugadorJuego2);
 
-
 //Tablero logico de las celdas de los divs del grid
 let logicBoard = Array.from(document.getElementsByClassName("boxes"));
 
