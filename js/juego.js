@@ -64,11 +64,17 @@ logicBoard.map(box => {
                 if (comprobante === "X") {
                     console.log("JEJEJEJE");
                     sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego1));
-                    window.open("../pages/ganador.html", "_self");
+                    setTimeout(() => {
+                        window.open("../pages/ganador.html", "_self");
+                    }, 750);
+                    
                 }
                 if (comprobante === "O") {
                     sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego2));
-                    window.open("../pages/ganador.html", "_self");
+                    setTimeout(() => {
+                        window.open("../pages/ganador.html", "_self");
+                    }, 750);
+                    
                 }
                 //Cambiamos turno
                 turn = !turn;

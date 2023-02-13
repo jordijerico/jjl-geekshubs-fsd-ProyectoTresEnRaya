@@ -8,6 +8,14 @@
     font-size: xx-large;
 }
 
+.confetti {
+    width: 100%;
+    z-index: -2;
+    border: 1px solid #ddd;
+    position: relative;
+    opacity: 0.4;
+}
+
 /* Estilos de la ROW de la parte de abajo(botones(2)) */
 .rowBottom {
     height: 50vh;
@@ -68,5 +76,17 @@
 
     .btnHome a {
         font-size: x-large;
+    }
+}
+
+@media (min-width: 1024px) {
+    .colBottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .colTop {
+        margin-top: 1em !important;
     }
 }
