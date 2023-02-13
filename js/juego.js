@@ -39,48 +39,48 @@ let chartWinner = [
 document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
 //Mapeo de las 'box' para escribir en ellas X y O en cada casilla
 logicBoard.map(box => {
-        // Evento / funcion que comprueba los turnos y va pintando X o O cambiando el turno y bajando los turnos
-        box.addEventListener("click", () => {
-            if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0)) {
-                box.innerHTML = (turn) ? "X" : "O";
-                //Decrementador de turnos
-                if (turn) {
-                    turnPlayer1--;
-                    document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
-                    document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
-                    document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
-                    boardGame[box.id] = "X";
-                } else {
-                    turnPlayer2--;
-                    document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
-                    document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
-                    document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
-                    boardGame[box.id] = "O";         
-                }
-
-                //Comprobar ganador
-                let comprobante;
-                comprobante = winnerCheck();
-                if (comprobante === "X") {
-                    console.log("JEJEJEJE");
-                    sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego1));
-                    setTimeout(() => {
-                        window.open("../pages/ganador.html", "_self");
-                    }, 750);
-                    
-                }
-                if (comprobante === "O") {
-                    sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego2));
-                    setTimeout(() => {
-                        window.open("../pages/ganador.html", "_self");
-                    }, 750);
-                    
-                }
-                //Cambiamos turno
-                turn = !turn;
+    // Evento / funcion que comprueba los turnos y va pintando X o O cambiando el turno y bajando los turnos
+    box.addEventListener("click", () => {
+        if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0)) {
+            box.innerHTML = (turn) ? "X" : "O";
+            //Decrementador de turnos
+            if (turn) {
+                turnPlayer1--;
+                document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+                document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
+                document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
+                boardGame[box.id] = "X";
+            } else {
+                turnPlayer2--;
+                document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
+                document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
+                document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
+                boardGame[box.id] = "O";
             }
-        })
-    }
+
+            //Comprobar ganador
+            let comprobante;
+            comprobante = winnerCheck();
+            if (comprobante === "X") {
+                console.log("JEJEJEJE");
+                sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego1));
+                setTimeout(() => {
+                    window.open("../pages/ganador.html", "_self");
+                }, 750);
+
+            }
+            if (comprobante === "O") {
+                sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego2));
+                setTimeout(() => {
+                    window.open("../pages/ganador.html", "_self");
+                }, 750);
+
+            }
+            //Cambiamos turno
+            turn = !turn;
+        }
+    })
+}
 )
 
 
