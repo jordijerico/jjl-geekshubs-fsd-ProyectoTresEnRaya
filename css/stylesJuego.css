@@ -49,7 +49,7 @@
   align-items: center;
 }
 
-
+/* 2 clases que se añaden en cada turno a cada div de jugador para indicar el turno que toca */
 .pantallaPlayer1Styles{
   background-color: red;
 }
@@ -57,7 +57,6 @@
 .pantallaPlayer2Styles{
   background-color: red;
 }
-
 
 
 /* Estilos de la columna de datos de los dos jugadores */
@@ -98,8 +97,33 @@
 
 /* Estilos de la ficha de cada jugador en la INFO de cada uno en la pantalla juego*/
 .imgChip {
-  text-align: end;
+  z-index: 2;
+  position: fixed;
+  font-size: 50px;
+  margin-left: 4.5em;
 }
+  
+
+.gameName {
+font-weight: bolder;
+}
+
+
+@media (min-width: 1000px) {
+
+  .btnBottom button {
+    height: 70px;
+    width: 200px;
+    font-size: x-large;
+  }
+}
+
+@media (min-width: 1350px) {
+  .colBoard {
+    height: 50vh;
+  }
+}
+
 
 /* Diferentes estilos media query para pantallas mas grandes */
 
@@ -119,7 +143,6 @@
     font-size: 100px;
   }
 
-
   .boxes {
     font-size: 110px;
   }
@@ -134,4 +157,14 @@
     width: 200px;
     font-size: x-large;
   }
+
+  .imgChip {
+    font-size: 100px;
+    margin-left: 3.5em;
+  }
+
+  .gameName {
+    font-size: 1.5em;
+    }
+    
 }
