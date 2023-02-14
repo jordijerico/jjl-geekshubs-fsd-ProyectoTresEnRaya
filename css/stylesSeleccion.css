@@ -4,7 +4,6 @@ input {
     margin-top: 10px !important;
     border-radius: 10px;
     width: 70%;
-
 }
 
 /* Estilos del mensaje de error al introducir nombre de jugador */
@@ -78,7 +77,6 @@ input {
 
 
 /* Diferentes estilos media query para pantallas mas grandes */
-
 @media (min-width: 1600px) {
 
     /* Estilos titulo de la pagina */

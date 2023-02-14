@@ -8,11 +8,10 @@ let botonAceptarPlayer1 = document.getElementById("botonAceptarPlayer1");
 let botonAceptarPlayer2 = document.getElementById("botonAceptarPlayer2");
 
 //Evento que lanza el boton de Jugador 1. Comprueba campo, lee, guarda y adjudica al label superior el valor siempre que sea correcto.
-
 botonAceptarPlayer1.addEventListener("click", () => {
 
     if (nombrePlayer1.value === "" || nombrePlayer1.value.length < 3) {
-        document.getElementById("pMensaje1").innerHTML = ("Escribe un nombre que contenga <br> entre 3 y 12 caracteres")
+        document.getElementById("pMensaje1").innerHTML = ("Escribe un nombre que contenga <br> entre 3 y 12 caracteres");
         document.getElementById("namePl1").value = ("");
     } else {
         sessionStorage.setItem("nombreJugador1", JSON.stringify(nombrePlayer1.value));
@@ -45,8 +44,6 @@ const comprobarCampos = () => {
 
 //Boton de START empezar JUEGO.
 botonAceptarSeleccion.addEventListener("click", () => {
-
     window.open("../pages/juego.html", "_self");
-
 })
 

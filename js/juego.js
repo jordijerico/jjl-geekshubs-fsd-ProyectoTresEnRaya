@@ -62,19 +62,16 @@ logicBoard.map(box => {
             let comprobante;
             comprobante = winnerCheck();
             if (comprobante === "X") {
-                console.log("JEJEJEJE");
                 sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego1));
                 setTimeout(() => {
                     window.open("../pages/ganador.html", "_self");
                 }, 750);
-
             }
             if (comprobante === "O") {
                 sessionStorage.setItem("ganadorDelJuego", JSON.stringify(nombreJugadorJuego2));
                 setTimeout(() => {
                     window.open("../pages/ganador.html", "_self");
                 }, 750);
-
             }
             //Cambiamos turno
             turn = !turn;
