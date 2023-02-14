@@ -35,9 +35,11 @@ let chartWinner = [
     [2, 4, 6],
 ];
 
-
+//Estilo del primer jugador en la vista 
 document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
+
 //Mapeo de las 'box' para escribir en ellas X y O en cada casilla
+
 logicBoard.map(box => {
     // Evento / funcion que comprueba los turnos y va pintando X o O cambiando el turno y bajando los turnos
     box.addEventListener("click", () => {
@@ -50,14 +52,30 @@ logicBoard.map(box => {
                 document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
                 document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
                 boardGame[box.id] = "X";
+
+
+                // Seguir poniendo fichas ( under construction)
+                if (box.innerHTML === "X" && turnPlayer1 === 0) {
+                    box.innerHTML === "";
+                    boardGame[box.id] = "";
+                    turnPlayer1 + 1;
+                }
             } else {
                 turnPlayer2--;
                 document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
                 document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
                 document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
                 boardGame[box.id] = "O";
+
+                // Seguir poniendo fichas ( under construction)
+                if (box.innerHTML === "O" && turnPlayer2 === 0) {
+                    box.innerHTML === "";
+                    boardGame[box.id] = "";
+                    turnPlayer2 + 1;
+                }
             }
 
+            
             //Comprobar ganador
             let comprobante;
             comprobante = winnerCheck();
@@ -79,6 +97,11 @@ logicBoard.map(box => {
     })
 }
 )
+
+
+
+
+
 
 
 //FUNCION PARA COMPROBAR EL GANADOR CADA TURNO
