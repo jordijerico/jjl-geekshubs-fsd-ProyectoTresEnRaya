@@ -39,44 +39,50 @@ let chartWinner = [
 document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
 
 //Mapeo de las 'box' para escribir en ellas X y O en cada casilla
-
+let turnos = 6;
 logicBoard.map(box => {
     // Evento / funcion que comprueba los turnos y va pintando X o O cambiando el turno y bajando los turnos
     box.addEventListener("click", () => {
         if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0)) {
             box.innerHTML = (turn) ? "X" : "O";
-            //Decrementador de turnos
+
             if (turn) {
                 turnPlayer1--;
                 document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
                 document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
                 document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
                 boardGame[box.id] = "X";
-
-
-                // Seguir poniendo fichas ( under construction)
-                if (box.innerHTML === "X" && turnPlayer1 === 0) {
-                    box.innerHTML === "";
-                    boardGame[box.id] = "";
-                    turnPlayer1 + 1;
-                }
-            } else {
+                console.log(boardGame);
+                turnos--;
+            }
+            else {
                 turnPlayer2--;
                 document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
                 document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
                 document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
                 boardGame[box.id] = "O";
-
-                // Seguir poniendo fichas ( under construction)
-                if (box.innerHTML === "O" && turnPlayer2 === 0) {
+                console.log(boardGame);
+                turnos--;
+            }
+            console.log("turnos :" + turnos);
+            // console.log("turnosjug1 :" + turnPlayer1);
+            // console.log("turnosjug2 :" + turnPlayer2);
+            if (turnos === 0) {
+                console.log("HOLAAAAAAAAAAAA");
+                if (turn && boardGame[box.id] === "X" && turnPlayer1 === 0) {
+                    console.log("HOLA");
                     box.innerHTML === "";
                     boardGame[box.id] = "";
-                    turnPlayer2 + 1;
+                    turnPlayer1++;
+                }
+                if (!turn && box.innerHTML === "O" && turnPlayer2 === 0) {
+                    box.innerHTML === "";
+                    boardGame[box.id] = "";
+                    turnPlayer2;
                 }
             }
 
-            
-            //Comprobar ganador
+            //COMPROBAR WINNER
             let comprobante;
             comprobante = winnerCheck();
             if (comprobante === "X") {
@@ -99,14 +105,8 @@ logicBoard.map(box => {
 )
 
 
-
-
-
-
-
 //FUNCION PARA COMPROBAR EL GANADOR CADA TURNO
 const winnerCheck = () => {
-
     for (let i = 0; i < chartWinner.length; i++) {
         let [x, y, z] = chartWinner[i];
         if (boardGame[x] === boardGame[y] && boardGame[y] === boardGame[z] && boardGame[x] === boardGame[z]) {
