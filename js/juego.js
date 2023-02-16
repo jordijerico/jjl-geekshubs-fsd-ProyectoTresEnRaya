@@ -65,22 +65,21 @@ logicBoard.map(box => {
                 turnos--;
             }
             console.log("turnos :" + turnos);
-            // console.log("turnosjug1 :" + turnPlayer1);
-            // console.log("turnosjug2 :" + turnPlayer2);
             if (turnos === 0) {
-                console.log("HOLAAAAAAAAAAAA");
-                if (turn && boardGame[box.id] === "X" && turnPlayer1 === 0) {
+                console.log("HOLAAAAAAAAAAAAAAAAAAAAA");
+                if (box.innerHTML === "X") {
                     console.log("HOLA");
                     box.innerHTML === "";
                     boardGame[box.id] = "";
                     turnPlayer1++;
                 }
-                if (!turn && box.innerHTML === "O" && turnPlayer2 === 0) {
+                if (box.innerHTML === "O") {
                     box.innerHTML === "";
                     boardGame[box.id] = "";
-                    turnPlayer2;
+                    turnPlayer2++;
                 }
             }
+
 
             //COMPROBAR WINNER
             let comprobante;
