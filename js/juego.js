@@ -13,8 +13,8 @@ let logicBoard = Array.from(document.getElementsByClassName("boxes"));
 let turnPlayer1 = 3;
 let turnPlayer2 = 3;
 
-document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
-document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
+document.getElementById("turnosPlayer1").innerHTML = (`Turns left: ${turnPlayer1}`);
+document.getElementById("turnosPlayer2").innerHTML = (`Turns left: ${turnPlayer2}`);
 
 //Array logica del tablero donde pintamos en cada posicion la X o la O correspondiente al hacer click al ir jugando.
 //Aquí se sobreescribiran cuando las vayamos moviendo o sustituyendo por el otro simbolo
@@ -54,7 +54,7 @@ logicBoard.map(box => {
             turnPlayer1--;
             turn = !turn;
             turnos--;
-            document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+            document.getElementById("turnosPlayer1").innerHTML = (`Turns left: ${turnPlayer1}`);
             // Turno del jugador 2 hasta que hayan 6 fichas colocadas
         } else if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0) && !turn && turnos > 0) {
             document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
@@ -64,13 +64,13 @@ logicBoard.map(box => {
             turnPlayer2--;
             turn = !turn;
             turnos--;
-            document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
+            document.getElementById("turnosPlayer2").innerHTML = (`Turns left: ${turnPlayer2}`);
             // Turno del jugador 1 para quitar ficha cuando existan 6 colocadas en el tablero
         } else if ((box.innerHTML === "X") && (turnPlayer1 === 0 && turnPlayer2 === 0) && turn2 && turnos === 0) {
             box.innerHTML = "";
             boardGame[box.id] = "";
             turnPlayer1++;
-            document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+            document.getElementById("turnosPlayer1").innerHTML = (`Turns left: ${turnPlayer1}`);
             // Turno del jugador 1 para poner la ficha quitada cuando existan 6 colocadas en el tablero
         } else if (box.innerHTML === "" && (turnPlayer1 === 1 && turnPlayer2 === 0) && turn2 && turnos === 0) {
             box.innerHTML = "X"
@@ -79,13 +79,13 @@ logicBoard.map(box => {
             document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
             document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
             turnPlayer1--;
-            document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+            document.getElementById("turnosPlayer1").innerHTML = (`Turns left: ${turnPlayer1}`);
             // Turno del jugador 2 para quitar ficha cuando existan 6 colocadas en el tablero
         } else if ((box.innerHTML === "O") && (turnPlayer1 === 0 && turnPlayer2 === 0) && !turn2 && turnos === 0) {
             box.innerHTML = "";
             boardGame[box.id] = "";
             turnPlayer2++;
-            document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
+            document.getElementById("turnosPlayer2").innerHTML = (`Turns left: ${turnPlayer2}`);
             // Turno del jugador 2 para poner la ficha quitada cuando existan 6 colocadas en el tablero
         } else if (box.innerHTML === "" && (turnPlayer2 === 1 && turnPlayer1 === 0) && !turn2 && turnos === 0) {
             box.innerHTML = "O"
@@ -94,7 +94,7 @@ logicBoard.map(box => {
             document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
             document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
             turnPlayer2--;
-            document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
+            document.getElementById("turnosPlayer2").innerHTML = (`Turns left: ${turnPlayer2}`);
         }
 
         //COMPROBAR WINNER

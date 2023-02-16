@@ -4,6 +4,7 @@ input {
     margin-top: 10px !important;
     border-radius: 10px;
     width: 70%;
+    text-align: center;
 }
 
 /* Estilos del mensaje de error al introducir nombre de jugador */
