@@ -22,6 +22,7 @@
 .finalWinner {
     font-weight: 900;
 }
+
 /* Estilos del nombre del ganador (letra)*/
 .finalWinner .letter {
     display: inline-block;
