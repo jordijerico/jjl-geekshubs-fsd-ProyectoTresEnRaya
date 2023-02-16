@@ -9,8 +9,6 @@ document.getElementById("nombrePlayer2Juego").innerHTML = (nombreJugadorJuego2);
 //Tablero logico de las celdas de los divs del grid
 let logicBoard = Array.from(document.getElementsByClassName("boxes"));
 
-let turn = true;
-
 //Turnos inicializados de los jugadores en 3 (decrecerá)
 let turnPlayer1 = 3;
 let turnPlayer2 = 3;
@@ -39,54 +37,55 @@ let chartWinner = [
 document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
 
 //Mapeo de las 'box' para escribir en ellas X y O en cada casilla
+let turn = true;
 let turn2 = true;
 let turnos = 6;
 logicBoard.map(box => {
     // Evento / funcion que comprueba los turnos y va pintando X o O cambiando el turno y bajando los turnos
     box.addEventListener("click", () => {
-        if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0) && turn && turnos > 0 ) {
-            document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+        if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0) && turn && turnos > 0) {
             document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
             document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
             box.innerHTML = (turn) ? "X" : "O";
             boardGame[box.id] = "X";
             turnPlayer1--;
             turn = !turn;
-
+            turnos--;
+            document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
         } else if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0) && !turn && turnos > 0) {
-            document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
             document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
             document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
             box.innerHTML = (turn) ? "X" : "O";
             boardGame[box.id] = "O";
             turnPlayer2--;
             turn = !turn;
-
-        } else if ((box.innerHTML === "X") && (turnPlayer1 === 0 && turnPlayer2 === 0) && turn2) {
-            console.log("1");
+            turnos--;
+            document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
+        } else if ((box.innerHTML === "X") && (turnPlayer1 === 0 && turnPlayer2 === 0) && turn2 && turnos === 0) {
             box.innerHTML = "";
             boardGame[box.id] = "";
+            turnPlayer1++;
 
-        } else if (box.innerHTML === "" && (turnPlayer1 === 0 && turnPlayer2 === 0) && turn2) {
-            console.log("2");
+        } else if (box.innerHTML === "" && (turnPlayer1 === 1 && turnPlayer2 === 0) && turn2 && turnos === 0) {
             box.innerHTML = "X"
             boardGame[box.id] = "X";
             turn2 = !turn2;
             document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
             document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
+            turnPlayer1--;
         }
-        else if ((box.innerHTML === "O") && (turnPlayer1 === 0 && turnPlayer2 === 0) && !turn2) {
-            console.log("3");
+        else if ((box.innerHTML === "O") && (turnPlayer1 === 0 && turnPlayer2 === 0) && !turn2 && turnos === 0) {
             box.innerHTML = "";
             boardGame[box.id] = "";
+            turnPlayer2++;
 
-        } else if (box.innerHTML === "" && (turnPlayer2 === 0 && turnPlayer1 === 0) && !turn2) {
-            console.log("4");
+        } else if (box.innerHTML === "" && (turnPlayer2 === 1 && turnPlayer1 === 0) && !turn2 && turnos === 0) {
             box.innerHTML = "O"
             boardGame[box.id] = "O";
             turn2 = !turn2;
             document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
             document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
+            turnPlayer2--;
         }
 
         //COMPROBAR WINNER
