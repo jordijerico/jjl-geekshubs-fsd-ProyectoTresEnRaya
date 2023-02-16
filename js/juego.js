@@ -36,13 +36,16 @@ let chartWinner = [
 //Estilo del primer jugador en la vista 
 document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
 
-//Mapeo de las 'box' para escribir en ellas X y O en cada casilla
+//Creacion de variables para controlar turnos
 let turn = true;
 let turn2 = true;
 let turnos = 6;
+//Mapeo de las 'box' para escribir en ellas X y O en cada casilla
+
 logicBoard.map(box => {
     // Evento / funcion que comprueba los turnos y va pintando X o O cambiando el turno y bajando los turnos
     box.addEventListener("click", () => {
+        // Turno del jugador 1 hasta que hayan 6 fichas colocadas
         if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0) && turn && turnos > 0) {
             document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
             document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
@@ -52,6 +55,7 @@ logicBoard.map(box => {
             turn = !turn;
             turnos--;
             document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+            // Turno del jugador 2 hasta que hayan 6 fichas colocadas
         } else if ((box.innerHTML === "") && (turnPlayer1 > 0 || turnPlayer2 > 0) && !turn && turnos > 0) {
             document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
             document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
@@ -61,11 +65,13 @@ logicBoard.map(box => {
             turn = !turn;
             turnos--;
             document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
+            // Turno del jugador 1 para quitar ficha cuando existan 6 colocadas en el tablero
         } else if ((box.innerHTML === "X") && (turnPlayer1 === 0 && turnPlayer2 === 0) && turn2 && turnos === 0) {
             box.innerHTML = "";
             boardGame[box.id] = "";
             turnPlayer1++;
-
+            document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+            // Turno del jugador 1 para poner la ficha quitada cuando existan 6 colocadas en el tablero
         } else if (box.innerHTML === "" && (turnPlayer1 === 1 && turnPlayer2 === 0) && turn2 && turnos === 0) {
             box.innerHTML = "X"
             boardGame[box.id] = "X";
@@ -73,12 +79,14 @@ logicBoard.map(box => {
             document.getElementById('jugador1style').classList.remove('pantallaPlayer1Styles');
             document.getElementById('jugador2style').classList.add('pantallaPlayer2Styles');
             turnPlayer1--;
-        }
-        else if ((box.innerHTML === "O") && (turnPlayer1 === 0 && turnPlayer2 === 0) && !turn2 && turnos === 0) {
+            document.getElementById("turnosPlayer1").innerHTML = (`Turnos restantes: ${turnPlayer1}`);
+            // Turno del jugador 2 para quitar ficha cuando existan 6 colocadas en el tablero
+        } else if ((box.innerHTML === "O") && (turnPlayer1 === 0 && turnPlayer2 === 0) && !turn2 && turnos === 0) {
             box.innerHTML = "";
             boardGame[box.id] = "";
             turnPlayer2++;
-
+            document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
+            // Turno del jugador 2 para poner la ficha quitada cuando existan 6 colocadas en el tablero
         } else if (box.innerHTML === "" && (turnPlayer2 === 1 && turnPlayer1 === 0) && !turn2 && turnos === 0) {
             box.innerHTML = "O"
             boardGame[box.id] = "O";
@@ -86,6 +94,7 @@ logicBoard.map(box => {
             document.getElementById('jugador2style').classList.remove('pantallaPlayer2Styles');
             document.getElementById('jugador1style').classList.add('pantallaPlayer1Styles');
             turnPlayer2--;
+            document.getElementById("turnosPlayer2").innerHTML = (`Turnos restantes: ${turnPlayer2}`);
         }
 
         //COMPROBAR WINNER
@@ -103,7 +112,6 @@ logicBoard.map(box => {
                 window.open("../pages/ganador.html", "_self");
             }, 750);
         }
-
     }
     )
 }
@@ -121,13 +129,10 @@ const winnerCheck = () => {
     return null;
 }
 
-
-
 /* BOTONES DE HOME Y RESET */
 
 let botonReset = document.getElementById("btnReset");
 let botonHome = document.getElementById("btnHome");
-
 
 botonHome.addEventListener('click', () => {
     window.open("../index.html", "_self");
