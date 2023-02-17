@@ -37,6 +37,26 @@ html a {
     font-size: 20px;
 }
 
+/* Estilos del boton que lanza el modal de normas y del modal */
+#botonNormasClose {
+    background-color: transparent;
+    border: 0;
+}
+
+.botonNormas {
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
+.modalete {
+    background-color: rgba(0, 0, 0, 0.923) !important;
+}
+
+.cuerpoModal {
+    font-size: small;
+    line-height: 2em;
+}
+
 /* Estilos boton START */
 .btnStart {
     background-color: transparent;
@@ -62,6 +82,10 @@ html a {
         font-size: xx-large;
         width: 200px;
         height: 100px;
+    }
+
+    .botonNormas {
+        font-size: xx-large !important;
     }
 
 }

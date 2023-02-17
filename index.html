@@ -34,11 +34,42 @@
         </div>
         <!-- ROW NORMAS -->
         <div class="row rowBottom text-center">
+
             <div class="col">
-                <div class="normas"><a href="./pages/normas.html"> HOW TO PLAY</a></div>
+                <button type="button" class="btn btn-primary botonNormas" onclick="lanzarNormas()" data-toggle="modal"
+                    data-target="#exampleModalCenter">
+                    NORMAS
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content modalete">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-center" id="exampleModalLongTitle">NORMAS</h5>
+                            </div>
+                            <div class="modal-body cuerpoModal">
+                                1- The game is played on a grid that's 3 squares by 3 squares.
+                                <br> <br>
+                                2- You are X, your friend is O. Players take turns
+                                putting their marks in empty squares.
+                                <br> <br>
+                                3- The first player to get 3 of her marks in a row (up, down, across, or diagonally) is
+                                the winner.
+                                <br> <br>
+                                4- When 6 squares are full, the game change to remove and reput each mark.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="botonNormasClose" onclick="cerrarNormas()" class="btn btn-secondary"
+                                    data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
