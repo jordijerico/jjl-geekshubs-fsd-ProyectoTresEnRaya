@@ -18,6 +18,18 @@
     margin-top: 50px;
 }
 
+/* Estilos del nombre del ganador*/
+.finalWinner {
+    font-weight: 900;
+}
+
+/* Estilos del nombre del ganador (letra)*/
+.finalWinner .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+
 /* Estilos botones / links */
 .btnPlayAgain a {
     text-decoration: none;

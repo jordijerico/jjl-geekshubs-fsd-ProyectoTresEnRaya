@@ -103,23 +103,6 @@
   font-weight: bolder;
 }
 
-
-@media (min-width: 1000px) {
-
-  .btnBottom button {
-    height: 70px;
-    width: 200px;
-    font-size: x-large;
-  }
-}
-
-@media (min-width: 1350px) {
-  .colBoard {
-    height: 50vh;
-  }
-}
-
-
 /* Diferentes estilos media query para pantallas mas grandes */
 
 @media (min-width: 1600px) {
@@ -162,4 +145,19 @@
     font-size: 1.5em;
   }
 
+}
+
+@media (min-width: 1350px) {
+  .colBoard {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .btnBottom button {
+    height: 70px;
+    width: 200px;
+    font-size: x-large;
+  }
 }

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/stylesGeneral.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Tres en Raya</title>
+    <title>TICTACTOE</title>
 </head>
 
 <body>
@@ -19,8 +19,8 @@
         <div class="row rowTop">
             <!-- Col que muestra el texto de ganador -->
             <div class="col-12 col-lg-6 colTop">
-                ¡ENHORABUENA! <p id="nombreDelGanador"></p> <br>
-                HAS GANADO
+                ¡CONGRATULATIONS! <p class="finalWinner" id="nombreDelGanador"></p>
+                YOU WIN
             </div>
         </div>
         <!-- Row que muestra los dos botones de volver a Home y Volver a jugar -->
@@ -28,17 +28,17 @@
             <div class="col-12 col-lg-12 colBottom">
                 <!-- Boton VOLVER A JUGAR -->
                 <button id="" class="btnPlayAgain">
-                    <a href="../pages/seleccionJugadores.html">VOLVER A JUGAR</a>
+                    <a href="../pages/seleccionJugadores.html">PLAY AGAIN</a>
                 </button>
                 <!-- Boton HOME -->
                 <button id="" class="btnHome">
-                    <a href="../index.html">PÁGINA PRINCIPAL</a>
+                    <a href="../index.html">MAIN HOME</a>
                 </button>
             </div>
         </div>
 
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="../js/ganador.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
