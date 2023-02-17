@@ -12,15 +12,15 @@ sessionStorage.clear();
 var textWrapper = document.querySelector('.finalWinner');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true})
+anime.timeline({ loop: true })
   .add({
     targets: '.finalWinner .letter',
-    scale: [4,1],
-    opacity: [0,1],
+    scale: [4, 1],
+    opacity: [0, 1],
     translateZ: 0,
     easing: "easeOutExpo",
     duration: 3000,
-    delay: (el, i) => 70*i
+    delay: (el, i) => 70 * i
   }).add({
     targets: '.ml2',
     opacity: 0,
