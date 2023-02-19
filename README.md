@@ -19,6 +19,7 @@ Este proyecto requería la creación de un sitio web responsive de un famoso jue
     ![Alt text](img/MainMovil.png)![Alt text](img/mainPC.PNG)
    
     - Pantalla de selección del nombre de ambos jugadores e iniciación del juego.
+    
     ![Alt text](img/JugadoresMovil.png)
     ![Alt text](img/jugadoresPC.PNG)
     
