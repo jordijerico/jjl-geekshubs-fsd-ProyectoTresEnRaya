@@ -16,10 +16,9 @@ Este proyecto requería la creación de un sitio web responsive de un famoso jue
 
 * Se ha estructurado de la siguiente manera:
     - Pantalla de bienvenida al jugador con botón de acceso a selección de jugadores y normas del juego:
-     ![Alt text](img/MainMovil.png)![Alt text](img/mainPC.PNG)
+    ![Alt text](img/MainMovil.png)![Alt text](img/mainPC.PNG)
    
     - Pantalla de selección del nombre de ambos jugadores e iniciación del juego.
-    - 
     ![Alt text](img/JugadoresMovil.png)
     ![Alt text](img/jugadoresPC.PNG)
     
