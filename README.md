@@ -12,8 +12,7 @@
 
 ### INTRODUCCIÓN
 
-Este proyecto requería la creación de un sitio web responsive de un local con su correspondiente presentación,  carta de platos y sitio de contacto.
-En este caso yo he realizado una carta de un restaurante de Ramen llamado Anteiku, un lugar ubicado en el centro de Madrid donde podrá degustar uno de los mejores Ramen de España. Estructurada en 3 ventanas diferentes que a continuación paso a explicar.
+Este proyecto requería la creación de un sitio web responsive de un famoso juego llamado Tic Tac Toe o Tres en Raya. Estructurado en ventanas diferentes que a continuación paso a explicar.
 
 * Se ha estructurado de la siguiente manera:
     - Pantalla de bienvenida al jugador con botón de acceso a selección de jugadores y normas del juego:
