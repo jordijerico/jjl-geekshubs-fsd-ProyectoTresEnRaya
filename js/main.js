@@ -20,7 +20,6 @@ botonAceptarPlayer1.addEventListener("click", () => {
         document.getElementById("pMensaje1").innerHTML = ("");
         comprobarCampos();
     }
-
 });
 
 //Evento que lanza el boton de Jugador 2. Comprueba campo, lee, guarda y adjudica al label superior el valor siempre que sea correcto.
